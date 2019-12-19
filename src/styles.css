@@ -7,3 +7,7 @@ body {
     margin-bottom: 2rem;
     cursor: pointer; /* main de Mickey */
 }
+
+.cart{
+    font-size: 30;
+}

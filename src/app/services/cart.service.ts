@@ -28,7 +28,7 @@ export class CartService {
     }
     // Incrémente le nombre total d'articles et recalcule le montant total
     this.totalProducts++;
-    this.totalProducts = this.totalAmount + product.price;
+    this.totalAmount = this.totalAmount + product.price;
   }
 
   // Décrémente / Retire un produit du panier
@@ -41,7 +41,7 @@ export class CartService {
       }
       // Décrémente le nombre total d'articles et recalcule le montant total
       this.totalProducts--;
-      this.totalProducts = this.totalAmount - product.price;
+      this.totalAmount = this.totalAmount - product.price;
     }
   }
 

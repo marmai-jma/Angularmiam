@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-cart-icon',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartIconComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cart: CartService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  getTotalProducts(){
+    return this.cart.totalProducts;
   }
 
 }
