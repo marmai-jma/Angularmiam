@@ -6,7 +6,7 @@ enum ProductType {
 export class Product {
     id: number;
     name: string;
-    type: ProductType;
+    type: string;
     description: string;
     stock: number;
     photo: string;
@@ -15,7 +15,7 @@ export class Product {
     constructor(options:{
         id: number;
         name: string;
-        type: ProductType;
+        type: string; // metttre ici le mapping du type
         description: string;
         stock: number;
         photo: string;
