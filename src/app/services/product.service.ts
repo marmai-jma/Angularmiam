@@ -37,5 +37,13 @@ export class ProductService {
     return of(null);
   }
 
+  getProductBySlug(slug: string): Observable<Product>{
+    return this.http.get(`${this.baseUrl}/products?slug=${slug}`)
+    .pipe(
+      map(results => results[0]), // garde le 1er objet dans la liste des obj renvoyés
+      map((productData: any) => new Product(productData)),
+      catchError(this.muteRequestError)
+    );
+  }
 
 }
