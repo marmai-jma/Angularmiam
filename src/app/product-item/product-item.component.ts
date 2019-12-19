@@ -15,7 +15,9 @@ export class ProductItemComponent implements OnInit {
   constructor(private cart: CartService) { }
 
 ngOnInit() {
-  this.numProducts = 0; // @TOTO: Initialiser avec le panier !!
+  // Récupère le nb d'unités déjà ajoutées au panier
+  // pour le produit en cours
+  this.numProducts = this.cart.getNumForProduct(this.product.id);
 
 }
 
