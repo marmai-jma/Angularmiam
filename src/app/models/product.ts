@@ -1,4 +1,4 @@
-enum ProductType {
+export enum ProductType {
     Entree,
     Plat,
     Dessert}
@@ -12,7 +12,7 @@ export class Product {
     photo: string;
     price: number;
     tags: any[];
-    nutritionalInformations: any[];
+    nutritionalInfo: any[];
     slug: string;
 
 
@@ -25,7 +25,7 @@ export class Product {
         photo: string;
         price: number;
         tags: any[];
-        nutritionalInformations: any[];
+        nutritionalInfo: any[];
         slug: string;
     }){
         // Object.assign(this, options); <= tout initialiser d'un coup mais sale
@@ -50,7 +50,7 @@ export class Product {
         this.photo = options.photo;
         this.price = options.price;
         this.tags = options.tags;
-        this.nutritionalInformations = options.nutritionalInformations;
+        this.nutritionalInfo = options.nutritionalInfo;
         this.slug = options.slug;
     }
 }
