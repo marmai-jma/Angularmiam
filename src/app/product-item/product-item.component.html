@@ -1,17 +1,17 @@
-<p>product-item works!</p>
-<div class="card product" [routerLink]="['/produit',product.slug]">
-    <img [src]="product.photo" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{product.name}}</h5>
-      <p class="card-text">{{product.shortDescription}}</p>
+<div class="card product shadow-sm" [routerLink]="['/produit', product.slug]">
+  <img [src]="product.photo" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name.substring(0, 28) }}...</h5>
+    <p class="card-text">{{ product.description.substring(0, 70) }}...</p>
 
-      <p class="buttons" style="font-size: 30px;">
+    <p class="buttons" style="font-size: 30px;">
       <i class="far fa-minus-square"
-      *ngIf="numProducts > 0"
+        *ngIf="numProducts > 0"
         (click)="remove($event)"></i>
-      {{ numProducts}}
-      <i class="far fa-plus-square" (click)="add($event)"></i>
+      {{ numProducts }}
+      <i class="far fa-plus-square"
+        (click)="add($event)"></i>
     </p>
 
-    </div>
   </div>
+</div>
